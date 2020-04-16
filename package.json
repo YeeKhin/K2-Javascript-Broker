@@ -1,0 +1,38 @@
+{
+  "packageComments": {
+    "environmentId": "Unique GUID for your tenant. See extension to create new one https://marketplace.visualstudio.com/items?itemName=heaths.vscode-guid",
+    "name-description-version": "Provide a unique name, description and version for your broker"
+  },
+  "environmentId": "ef63c033-718d-4351-964e-9eae5f9f2ffd",
+  "name": "sample-todo",
+  "version": "0.0.1",
+  "description": "Sample - To Do",
+  "homepage": "https://www.k2.com",
+  "license": "ISC",
+  "author": {
+    "name": "K2 OSS",
+    "email": "oss@k2.com",
+    "url": "https://www.k2.com"
+  },
+  "files": [
+    "dist/index.js",
+    "def/broker.json"
+  ],
+  "keywords": [
+    "k2-integration",
+    "broker"
+  ],
+  "k2": {
+    "broker": "def/broker.json"
+  },
+  "scripts": {
+    "build": "parcel build index.ts --experimental-scope-hoisting",
+    "postbuild": "powershell.exe -ExecutionPolicy Bypass -NoProfile -NonInteractive -File post-build.ps1"
+  },
+  "sideEffects": true,
+  "devDependencies": {
+    "@k2oss/k2-broker-core": "0.0.4",
+    "parcel-bundler": "^1.12.3",
+    "typescript": "^3.5.3"
+  }
+}
