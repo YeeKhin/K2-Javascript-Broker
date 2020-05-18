@@ -38,11 +38,8 @@
             "responses":{
                "200":{
                   "description":"orderinfo",
-                  "schema":{
-                     "type":"object",
-                     "items":{
-                        "$ref":"#/definitions/Readorder_wrapper"
-                     }
+                  "schema":{                  
+                     "$ref":"#/definitions/Readorder_wrapper"
                   },
                   "examples":{
                      "application/json":{
