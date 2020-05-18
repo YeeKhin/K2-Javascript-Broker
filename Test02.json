@@ -39,9 +39,9 @@
                "200":{
                   "description":"OK",
                   "schema":{
-                     "type":"array",
+                     "type":"object",
                      "items":{
-                        "$ref":"#/definitions/ReadSoLine"
+                        "$ref":"#/definitions/ReadSoLineWrapper"
                      }
                   },
                   "examples":{
@@ -76,6 +76,20 @@
       }
    },
    "definitions":{
+      "ReadSoLineWrapper": {
+      "type": "object",
+      "properties": {
+        "data": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/ReadSoLineWrapper"
+            }
+        },
+        "count": {
+          "type": "integer"
+        }
+      }
+    },
       "Orderno":{
          "description":"Model for Orderno",
          "required":[
