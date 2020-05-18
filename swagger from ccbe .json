@@ -1,0 +1,102 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Teckwah REST API",
+    "version": "v1"
+  },
+  "host": "test3.vinfiniti.biz:8210",
+  "basePath": "/Vin3RService/rest/commonEdi",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/getEdiData/MELS/TBLEDI_MELS_TALLYSHEET_SO": {
+      "post": {
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/REQUEST_TBLEDI_MELS_TALLYSHEET_SO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RESPONSE_TBLEDI_MELS_TALLYSHEET_SO"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "REQUEST_TBLEDI_MELS_TALLYSHEET_SO": {
+      "type": "object",
+      "properties": {
+        "VIN_ORDERNO": {
+          "type": "string"
+        }
+      }
+    },
+    "RESPONSE_TBLEDI_MELS_TALLYSHEET_SO": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RESPONSE_TBLEDI_MELS_TALLYSHEET_SO_DATA"
+          }
+        },
+        "count": {
+          "type": "integer"
+        }
+      }
+    },
+    "RESPONSE_TBLEDI_MELS_TALLYSHEET_SO_DATA": {
+      "type": "object",
+      "properties": {
+        "PROGRAMTYPE": {
+          "type": "string"
+        },
+        "VIN_REFERENCEA_VESSEL": {
+          "type": "string"
+        },
+        "VIN_PLANNEDRECEIVEDDATE_ETA": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "VIN_SHIPMENTMETHOD": {
+          "type": "string"
+        },
+        "DELIVERYMETHOD": {
+          "type": "string"
+        },
+        "VIN_CUSTSYSNO": {
+          "type": "string"
+        },
+        "VIN_REFERENCEF_POD": {
+          "type": "string"
+        },
+        "VIN_ORDERSTATUS": {
+          "type": "string"
+        },
+        "VIN_PLANNEDDELIVERYDATE_ETD": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "VIN_ORDERNO": {
+          "type": "string"
+        },
+        "VIN_REFERENCEC_VOY": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {},
+  "security": [],
+  "tags": []
+}
