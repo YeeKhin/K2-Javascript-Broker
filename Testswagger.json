@@ -39,7 +39,7 @@
                "200":{
                   "description":"orderinfo",
                   "schema":{
-                     "type":"array",
+                     "type":"object",
                      "items":{
                         "$ref":"#/definitions/Readorder_wrapper"
                      }
