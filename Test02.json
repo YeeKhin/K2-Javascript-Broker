@@ -38,11 +38,8 @@
             "responses":{
                "200":{
                   "description":"OK",
-                  "schema":{
-                     "type":"object",
-                     "items":{
+                  "schema":{                     
                         "$ref":"#/definitions/ReadSoLineWrapper"
-                     }
                   },
                   "examples":{
                      "application/json":{
