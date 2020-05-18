@@ -82,7 +82,7 @@
         "data": {
             "type": "array",
             "items": {
-                "$ref": "#/definitions/ReadSoLineWrapper"
+                "$ref": "#/definitions/ReadSoLine"
             }
         },
         "count": {
